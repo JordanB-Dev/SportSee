@@ -1,0 +1,51 @@
+.activity {
+  box-sizing: border-box;
+  width: 835px;
+  height: 320px;
+  padding: 25px 30px;
+  border-radius: 5px;
+  background: #fbfbfb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  font-size: 14px;
+
+  &_title {
+    position: absolute;
+    font-family: Roboto;
+    color: #20253a;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  & div:first-child {
+    display: flex;
+  }
+
+  & .tooltip {
+    display: block !important;
+    padding: 0.25rem 0.4375rem;
+    background-color: $red;
+    color: white;
+    font-size: 0.6875rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  & .recharts-surface {
+    margin-right: 0.75rem !important;
+    margin-left: 0 !important;
+  }
+
+  & .recharts-legend-item {
+    margin-right: 0 !important;
+    margin-left: 2rem;
+  }
+
+  & .recharts-legend-item-text {
+    color: #74798c !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
