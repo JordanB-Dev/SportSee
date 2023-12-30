@@ -19,7 +19,7 @@ const Profil: React.FC = () => {
     fetchUser(id).catch(console.error)
   }, [id])
 
-  return (
+  return user ? (
     <main>
       <div className="profil container">
         <UserInfos firstName={user?.firstName} />
@@ -30,6 +30,10 @@ const Profil: React.FC = () => {
         </div>
       </div>
     </main>
+  ) : (
+    <>
+      <p>Error</p>
+    </>
   )
 }
 
