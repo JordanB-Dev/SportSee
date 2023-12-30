@@ -8,3 +8,12 @@ main {
     margin: auto;
   }
 }
+
+.dashboard {
+  &_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    order: 2;
+  }
+}
