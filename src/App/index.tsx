@@ -1,16 +1,13 @@
-import { Route, Routes } from 'react-router-dom'
-import Home from '../pages/Home'
 import Header from '../layout/Header'
 import SideBar from '../layout/Sidebar'
+import Routes from '../Routes'
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
       <SideBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <Routes />
     </>
   )
 }
