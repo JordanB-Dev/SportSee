@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 
 import { API } from '../../services'
 const { getUserActivity } = API
+import CustomToolTip from './CustomToolTip'
+import { TypeActivity } from '../../Types'
 
 import {
   Bar,
@@ -14,11 +16,10 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
-import CustomToolTip from './CustomToolTip'
 
 const Activity: React.FC = () => {
-  const [state, setState] = useState([])
-  const { id } = useParams()
+  const [state, setState] = useState<TypeActivity>([])
+  const { id } = useParams<string>()
 
   useEffect(() => {
     const fetchActivity = async (id?: string) => {
