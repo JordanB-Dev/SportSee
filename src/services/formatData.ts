@@ -1,5 +1,7 @@
-export const formatActivity = (data) => {
-  const dataFormated = data.map((activity, index) => {
+import { TypeFormatActivity } from '../Types'
+
+export const formatActivity = (data: TypeFormatActivity) => {
+  const dataFormated = data.map((activity, index: number) => {
     return {
       day: index + 1,
       kilogram: activity.kilogram,
