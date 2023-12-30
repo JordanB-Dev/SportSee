@@ -1,0 +1,31 @@
+.user_infos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 30px;
+
+  &-title {
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  &-subtitle {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  &-name {
+    color: $red;
+  }
+}

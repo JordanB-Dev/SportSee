@@ -1,0 +1,10 @@
+main {
+  display: block;
+  flex-direction: column;
+  padding-top: 159px;
+
+  & .profil {
+    width: 60%;
+    margin: auto;
+  }
+}

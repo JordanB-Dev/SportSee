@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { API } from '../services'
-import UserInfos from '../components/Userinfos'
+import UserInfos from '../components/UserInfos'
 import { TypeUser } from '../Types'
 const { getUser } = API
 
