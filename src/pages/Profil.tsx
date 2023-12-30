@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { API } from '../services'
-import UserInfos from '../components/UserInfos'
 import { TypeUser } from '../Types'
 const { getUser } = API
+import UserInfos from '../components/UserInfos'
+import Activity from '../components/Activity'
 
 const Profil: React.FC = () => {
   const [user, setUser] = useState<TypeUser>()
@@ -22,6 +23,11 @@ const Profil: React.FC = () => {
     <main>
       <div className="profil container">
         <UserInfos firstName={user?.firstName} />
+        <div className="dashboard">
+          <div className="dashboard_left">
+            <Activity />
+          </div>
+        </div>
       </div>
     </main>
   )
