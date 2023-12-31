@@ -14,11 +14,11 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    order: 2;
   }
 
   &_bottom {
     display: flex;
     justify-content: space-between;
+    width: 835px;
   }
 }
