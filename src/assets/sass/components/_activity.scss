@@ -25,27 +25,27 @@
 
   & .tooltip {
     display: block !important;
-    padding: 0.25rem 0.4375rem;
+    padding: 4px 7px;
     background-color: $red;
     color: white;
-    font-size: 0.6875rem;
-    line-height: 1.5rem;
+    font-size: 11px;
+    line-height: 24px;
     text-align: center;
   }
 
   & .recharts-surface {
-    margin-right: 0.75rem !important;
+    margin-right: 12px !important;
     margin-left: 0 !important;
   }
 
   & .recharts-legend-item {
     margin-right: 0 !important;
-    margin-left: 2rem;
+    margin-left: 32px;
   }
 
   & .recharts-legend-item-text {
     color: #74798c !important;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 500;
   }
 }
