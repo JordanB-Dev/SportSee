@@ -1,4 +1,6 @@
-const CustomToolTip: React.FC = ({ active, payload }) => {
+import { TypeTooltip } from '../../Types'
+
+const CustomToolTip: React.FC<TypeTooltip> = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
       <div className="tooltip">

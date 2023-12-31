@@ -73,7 +73,12 @@ const Session: React.FC = () => {
             </linearGradient>
           </defs>
 
-          <Tooltip cursor={<CustomCursor />} content={<CustomToolTip />} />
+          <Tooltip
+            // eslint-disable-next-line
+            // @ts-ignore
+            cursor={<CustomCursor />}
+            content={<CustomToolTip active={false} payload={[]} />}
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>

@@ -1,6 +1,7 @@
 import { Rectangle } from 'recharts'
+import { TypeCursor } from '../../Types'
 
-const CustomCursor: React.FC = (props) => {
+const CustomCursor: React.FC<TypeCursor> = (props) => {
   const { points, width, height } = props
   const { x, y } = points[0]
   return (

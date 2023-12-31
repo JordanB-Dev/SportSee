@@ -34,3 +34,12 @@ export type TypeSession =
       value: number
     }[]
   | undefined
+
+export type TypeCursor = {
+  points: {
+    x: number
+    y: number
+  }[]
+  width: number
+  height: number
+}
