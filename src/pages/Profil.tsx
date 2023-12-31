@@ -6,6 +6,7 @@ import { TypeUser } from '../Types'
 import UserInfos from '../components/UserInfos'
 import Activity from '../components/Activity'
 import Session from '../components/Session'
+import UserPerf from '../components/UserPerf'
 
 const { getUser } = API
 
@@ -31,6 +32,7 @@ const Profil: React.FC = () => {
           </div>
           <div className="dashboard_bottom">
             <Session />
+            <UserPerf />
           </div>
         </div>
       </div>
