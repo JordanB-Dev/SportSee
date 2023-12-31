@@ -19,7 +19,7 @@ const UserPerf: React.FC = () => {
     fetchPerformance(id).catch(console.error)
   }, [id])
 
-  return <> {console.log(perf)} </>
+  return <div className="performance"></div>
 }
 
 export default UserPerf
