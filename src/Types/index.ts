@@ -43,3 +43,10 @@ export type TypeCursor = {
   width: number
   height: number
 }
+
+export type TypePerformance =
+  | {
+      category: string
+      value: number
+    }[]
+  | undefined
