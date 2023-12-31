@@ -16,4 +16,9 @@ main {
     justify-content: space-between;
     order: 2;
   }
+
+  &_bottom {
+    display: flex;
+    justify-content: space-between;
+  }
 }

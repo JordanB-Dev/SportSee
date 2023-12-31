@@ -29,7 +29,7 @@ const Profil: React.FC = () => {
           <div className="dashboard_left">
             <Activity />
           </div>
-          <div className="bottom">
+          <div className="dashboard_bottom">
             <Session />
           </div>
         </div>
