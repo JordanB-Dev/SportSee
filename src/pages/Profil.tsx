@@ -6,6 +6,7 @@ import { TypeUser } from '../Types'
 const { getUser } = API
 import UserInfos from '../components/UserInfos'
 import Activity from '../components/Activity'
+import Session from '../components/Session'
 
 const Profil: React.FC = () => {
   const [user, setUser] = useState<TypeUser>()
@@ -26,6 +27,9 @@ const Profil: React.FC = () => {
         <div className="dashboard">
           <div className="dashboard_left">
             <Activity />
+          </div>
+          <div className="bottom">
+            <Session />
           </div>
         </div>
       </div>
