@@ -8,8 +8,8 @@ export const getUser = async (id?: string) => {
         Accept: 'application/json',
       },
     })
-    const data = await res.json()
-    return data.find((user: { id: string }) => user.id == id).userInfos
+    const result = await res.json()
+    return result.find((user: { id: string }) => user.id == id).userInfos
   } catch (err) {
     console.log(JSON.stringify(err))
   }
@@ -23,10 +23,26 @@ export const getUserActivity = async (id?: string) => {
         Accept: 'application/json',
       },
     })
-    const data = await res.json()
+    const result = await res.json()
     return formatActivity(
-      data.find((user: { userId?: number }) => user.userId == id).sessions,
+      result.find((user: { userId?: number }) => user.userId == id).sessions,
     )
+  } catch (err) {
+    console.log(JSON.stringify(err))
+  }
+}
+
+export const getUserSession = async (id?: string) => {
+  try {
+    const res = await fetch('../../mocks/average_sessions.json', {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+    const result = await res.json()
+    return result.find((user: { userId?: number }) => user.userId == id)
+      .sessions
   } catch (err) {
     console.log(JSON.stringify(err))
   }
