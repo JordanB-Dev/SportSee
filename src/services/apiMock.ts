@@ -1,4 +1,4 @@
-import { formatActivity, formatSession } from './formatData'
+import { formatActivity, formatPerformance, formatSession } from './formatData'
 
 export const getUser = async (id?: string) => {
   try {
@@ -59,7 +59,9 @@ export const getUserPerformance = async (id?: string) => {
     })
     const result = await res.json()
 
-    return result.find((perf: { userId: string }) => perf.userId == id)
+    return formatPerformance(
+      result.find((perf: { userId: string }) => perf.userId == id),
+    )
   } catch (err) {
     console.log(JSON.stringify(err))
   }

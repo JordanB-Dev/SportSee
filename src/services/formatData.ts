@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { TypeFormatActivity, TypeFormatSession } from '../Types'
 
 export const formatActivity = (data: TypeFormatActivity) => {
@@ -39,4 +40,25 @@ export const dayConverter = (day: string | number) => {
       return 'D'
   }
   return
+}
+
+export const formatPerformance = (data: {
+  data: { kind: number; value: number }[]
+}) => {
+  const formattedKind = {
+    1: 'Cardio',
+    2: 'Energie',
+    3: 'Endurance',
+    4: 'Force',
+    5: 'Vitesse',
+    6: 'Intensité',
+  }
+
+  return data.data.map((perf) => {
+    return {
+      // @ts-ignore
+      category: formattedKind[perf.kind],
+      value: perf.value,
+    }
+  })
 }

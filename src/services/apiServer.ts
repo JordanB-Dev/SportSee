@@ -1,4 +1,4 @@
-import { formatActivity, formatSession } from './formatData'
+import { formatActivity, formatPerformance, formatSession } from './formatData'
 
 const env = import.meta.env
 
@@ -56,7 +56,7 @@ export const getUserPerformance = async (id?: string) => {
       },
     })
     const result = await res.json()
-    return result.data
+    return formatPerformance(result.data)
   } catch (err) {
     console.log(JSON.stringify(err))
   }
