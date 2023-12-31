@@ -1,4 +1,4 @@
-import { TypeFormatActivity } from '../Types'
+import { TypeFormatActivity, TypeFormatSession } from '../Types'
 
 export const formatActivity = (data: TypeFormatActivity) => {
   const dataFormated = data.map((activity, index: number) => {
@@ -11,7 +11,7 @@ export const formatActivity = (data: TypeFormatActivity) => {
   return dataFormated
 }
 
-export const formatSession = (data) => {
+export const formatSession = (data: TypeFormatSession) => {
   const dataFormated = data.map((user) => {
     return {
       day: dayConverter(user.day),

@@ -22,3 +22,15 @@ export type TypeTooltip = {
     value: number
   }[]
 }
+
+export type TypeFormatSession = {
+  day: string
+  sessionLength: number
+}[]
+
+export type TypeSession =
+  | {
+      day?: string | number
+      value: number
+    }[]
+  | undefined

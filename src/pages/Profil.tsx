@@ -3,10 +3,11 @@ import { useParams } from 'react-router-dom'
 
 import { API } from '../services'
 import { TypeUser } from '../Types'
-const { getUser } = API
 import UserInfos from '../components/UserInfos'
 import Activity from '../components/Activity'
 import Session from '../components/Session'
+
+const { getUser } = API
 
 const Profil: React.FC = () => {
   const [user, setUser] = useState<TypeUser>()

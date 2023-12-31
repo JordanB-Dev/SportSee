@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { API } from '../../services'
+import { TypeSession } from '../../Types'
+
 const { getUserSession } = API
 
 const Session: React.FC = () => {
-  const [state, setState] = useState([])
-  const { id } = useParams()
+  const [state, setState] = useState<TypeSession>([])
+  const { id } = useParams<string>()
 
   useEffect(() => {
     const fetchSession = async (id?: string) => {
