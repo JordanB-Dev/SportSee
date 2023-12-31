@@ -1,4 +1,4 @@
-import { formatActivity } from './formatData'
+import { formatActivity, formatSession } from './formatData'
 
 const env = import.meta.env
 
@@ -41,7 +41,7 @@ export const getUserSession = async (id?: string) => {
       },
     })
     const result = await res.json()
-    return result.data.sessions
+    return formatSession(result.data.sessions)
   } catch (err) {
     console.log(JSON.stringify(err))
   }

@@ -10,3 +10,33 @@ export const formatActivity = (data: TypeFormatActivity) => {
   })
   return dataFormated
 }
+
+export const formatSession = (data) => {
+  const dataFormated = data.map((user) => {
+    return {
+      day: dayConverter(user.day),
+      value: user.sessionLength,
+    }
+  })
+  return dataFormated
+}
+
+export const dayConverter = (day: string | number) => {
+  switch (day) {
+    case 1:
+      return 'L'
+    case 2:
+      return 'M'
+    case 3:
+      return 'M'
+    case 4:
+      return 'J'
+    case 5:
+      return 'V'
+    case 6:
+      return 'S'
+    case 7:
+      return 'D'
+  }
+  return
+}

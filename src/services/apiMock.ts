@@ -1,4 +1,4 @@
-import { formatActivity } from './formatData'
+import { formatActivity, formatSession } from './formatData'
 
 export const getUser = async (id?: string) => {
   try {
@@ -41,8 +41,9 @@ export const getUserSession = async (id?: string) => {
       },
     })
     const result = await res.json()
-    return result.find((user: { userId?: number }) => user.userId == id)
-      .sessions
+    return formatSession(
+      result.find((user: { userId?: number }) => user.userId == id).sessions,
+    )
   } catch (err) {
     console.log(JSON.stringify(err))
   }
