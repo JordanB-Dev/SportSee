@@ -46,3 +46,18 @@ export const getUserSession = async (id?: string) => {
     console.log(JSON.stringify(err))
   }
 }
+
+export const getUserPerformance = async (id?: string) => {
+  try {
+    const res = await fetch(`${env.VITE_URL_API}/user/${id}/performance`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+    const result = await res.json()
+    return result.data
+  } catch (err) {
+    console.log(JSON.stringify(err))
+  }
+}
