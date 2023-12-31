@@ -18,7 +18,14 @@ const Session: React.FC = () => {
     fetchSession(id).catch(console.error)
   }, [id])
 
-  return <div className="session">{console.log(state)}</div>
+  return (
+    <div className="session">
+      {' '}
+      <h3 className="session_title">
+        Durée moyenne des <br /> sessions
+      </h3>
+    </div>
+  )
 }
 
 export default Session
