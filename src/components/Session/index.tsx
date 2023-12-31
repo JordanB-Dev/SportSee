@@ -13,6 +13,7 @@ import {
   YAxis,
 } from 'recharts'
 import CustomToolTip from './CustomToolTip'
+import CustomCursor from './CustomCursor'
 
 const { getUserSession } = API
 
@@ -72,7 +73,7 @@ const Session: React.FC = () => {
             </linearGradient>
           </defs>
 
-          <Tooltip content={<CustomToolTip />} />
+          <Tooltip cursor={<CustomCursor />} content={<CustomToolTip />} />
         </LineChart>
       </ResponsiveContainer>
     </div>
