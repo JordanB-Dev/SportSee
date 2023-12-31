@@ -1,5 +1,5 @@
 const Session: React.FC = () => {
-  return <></>
+  return <div className="session"></div>
 }
 
 export default Session
