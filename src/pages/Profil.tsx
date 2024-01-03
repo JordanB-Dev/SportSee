@@ -7,6 +7,7 @@ import UserInfos from '../components/UserInfos'
 import Activity from '../components/Activity'
 import Session from '../components/Session'
 import UserPerf from '../components/UserPerf'
+import Score from '../components/Score'
 
 const { getUser } = API
 
@@ -32,6 +33,7 @@ const Profil: React.FC = () => {
             <div className="dashboard_bottom">
               <Session />
               <UserPerf />
+              <Score />
             </div>
           </div>
         </div>
