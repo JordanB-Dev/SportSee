@@ -61,3 +61,18 @@ export const getUserPerformance = async (id?: string) => {
     console.log(JSON.stringify(err))
   }
 }
+
+export const getScore = async (id?: string) => {
+  try {
+    const res = await fetch(`${env.VITE_URL_API}/user/${id}`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+    const score = await res.json()
+    return score.data.todayScore * 100
+  } catch (err) {
+    console.log(JSON.stringify(err))
+  }
+}

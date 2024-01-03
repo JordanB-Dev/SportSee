@@ -66,3 +66,21 @@ export const getUserPerformance = async (id?: string) => {
     console.log(JSON.stringify(err))
   }
 }
+
+export const getScore = async (id?: string) => {
+  try {
+    const res = await fetch('../../mocks/main_data.json', {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+    const data = await res.json()
+
+    return (
+      data.find((score: { id?: number }) => score.id == id).todayScore * 100
+    )
+  } catch (err) {
+    console.log(JSON.stringify(err))
+  }
+}
