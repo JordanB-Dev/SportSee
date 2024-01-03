@@ -1,4 +1,12 @@
-const Card: React.FC = ({ userKeyData, unit, subtitle, className, logo }) => {
+import { TypeCard } from '../../Types'
+
+const Card: React.FC<TypeCard> = ({
+  userKeyData,
+  unit,
+  subtitle,
+  className,
+  logo,
+}) => {
   return (
     <div className="card ">
       <div className={'card_icon ' + className}>

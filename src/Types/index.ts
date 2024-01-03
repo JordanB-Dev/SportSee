@@ -50,3 +50,15 @@ export type TypePerformance =
       value: number
     }[]
   | undefined
+
+export type TypeCard = {
+  lipidCount?: number
+  carbohydrateCount?: number
+  proteinCount?: number
+  calorieCount?: number
+  userKeyData?: number
+  className: string
+  subtitle: string
+  logo: string
+  unit: string
+}

@@ -6,12 +6,13 @@ import calories from '../../assets/images/energy.svg'
 import proteins from '../../assets/images/chicken.svg'
 import carbs from '../../assets/images/apple.svg'
 import fat from '../../assets/images/cheeseburger.svg'
+import { TypeCard } from '../../Types'
 
 const { getKeyData } = API
 
 const KeyData: React.FC = () => {
-  const [keyState, setKeyState] = useState()
-  const { id } = useParams()
+  const [keyState, setKeyState] = useState<TypeCard>()
+  const { id } = useParams<string>()
 
   useEffect(() => {
     const fetchData = async (id?: string) => {
