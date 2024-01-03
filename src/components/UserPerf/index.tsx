@@ -22,7 +22,6 @@ const UserPerf: React.FC = () => {
     const fetchPerformance = async (id?: string) => {
       const performance = await getUserPerformance(id)
       setPerf(performance)
-      console.log(performance)
     }
     fetchPerformance(id).catch(console.error)
   }, [id])
