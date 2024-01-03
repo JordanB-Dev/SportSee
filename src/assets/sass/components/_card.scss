@@ -1,0 +1,70 @@
+.card {
+  display: flex;
+  width: 12.125em;
+  margin-bottom: 2.4375em;
+  padding: 2em;
+  border-radius: 5px;
+  background: #fbfbfb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  font-size: 1rem;
+
+  & p {
+    margin: 0;
+  }
+
+  &_img {
+    width: 1.1875em;
+    height: 1.1875em;
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &_icon {
+    position: relative;
+    width: 3.75em;
+    height: 3.75em;
+    margin-right: 1.5rem;
+    border-radius: 6px;
+  }
+
+  &_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &_title {
+    color: #282d30;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.5em;
+  }
+
+  &_subtitle {
+    color: #74798c;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  &_icon.calorie {
+    background: rgba(255, 0, 0, 0.07);
+  }
+  &_icon.protein {
+    background: rgba(74, 184, 255, 0.1);
+  }
+  &_icon.carbohydrate {
+    background: rgba(249, 206, 35, 0.1);
+  }
+  &_icon.lipid {
+    background: rgba(253, 81, 129, 0.1);
+  }
+}

@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom'
 import { API } from '../../services'
 import Card from './Card'
 import calories from '../../assets/images/energy.svg'
+import proteins from '../../assets/images/chicken.svg'
+import carbs from '../../assets/images/apple.svg'
+import fat from '../../assets/images/cheeseburger.svg'
 
 const { getKeyData } = API
 
@@ -26,6 +29,27 @@ const KeyData: React.FC = () => {
         subtitle="Calories"
         className="calorie"
         logo={calories}
+      />
+      <Card
+        userKeyData={keyState?.proteinCount}
+        unit="g"
+        subtitle="Proteines"
+        className="protein"
+        logo={proteins}
+      />
+      <Card
+        userKeyData={keyState?.carbohydrateCount}
+        unit="g"
+        subtitle="Glucides"
+        className="carbohydrate"
+        logo={carbs}
+      />
+      <Card
+        userKeyData={keyState?.lipidCount}
+        unit="g"
+        subtitle="Lipides"
+        className="lipid"
+        logo={fat}
       />
     </>
   )
