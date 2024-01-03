@@ -84,3 +84,19 @@ export const getScore = async (id?: string) => {
     console.log(JSON.stringify(err))
   }
 }
+
+export const getKeyData = async (id?: string) => {
+  try {
+    const res = await fetch('../../mocks/main_data.json', {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+    const result = await res.json()
+
+    return result.find((key: { id?: number }) => key.id == id).keyData
+  } catch (err) {
+    console.log(JSON.stringify(err))
+  }
+}

@@ -1,7 +1,8 @@
 main {
-  display: block;
+  display: flex;
   flex-direction: column;
-  padding-top: 159px;
+  padding-top: 150px;
+  margin-left: 117px;
 
   & .profil {
     width: 60%;
@@ -10,15 +11,22 @@ main {
 }
 
 .dashboard {
+  display: flex;
+
   &_left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
+  &_aside {
+    display: block;
+    flex-direction: column;
+  }
+
   &_bottom {
     display: flex;
     justify-content: space-between;
-    width: 835px;
+    margin-bottom: 20px;
   }
 }
