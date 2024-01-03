@@ -8,6 +8,7 @@ import Activity from '../components/Activity'
 import Session from '../components/Session'
 import UserPerf from '../components/UserPerf'
 import Score from '../components/Score'
+import KeyData from '../components/KeyData'
 
 const { getUser } = API
 
@@ -35,6 +36,9 @@ const Profil: React.FC = () => {
               <UserPerf />
               <Score />
             </div>
+          </div>
+          <div className="dashboard_aside">
+            <KeyData />
           </div>
         </div>
       </div>
