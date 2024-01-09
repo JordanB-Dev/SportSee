@@ -1,6 +1,4 @@
 import * as apiServer from './apiServer'
 import * as apiMock from './apiMock'
 
-const isMockActive = true
-
-export const API = isMockActive ? apiMock : apiServer
+export const API = import.meta.env.VITE_MOCK === 'true' ? apiMock : apiServer
