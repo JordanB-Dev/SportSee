@@ -1,20 +1,20 @@
 .card {
   display: flex;
-  width: 12.125em;
-  margin-bottom: 2.4375em;
-  padding: 2em;
+  width: 194px;
+  margin-bottom: 39px;
+  padding: 32px;
   border-radius: 5px;
   background: #fbfbfb;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
-  font-size: 1rem;
+  font-size: 16px;
 
   & p {
     margin: 0;
   }
 
   &_img {
-    width: 1.1875em;
-    height: 1.1875em;
+    width: 19px;
+    height: 19px;
   }
 
   .center {
@@ -26,9 +26,9 @@
 
   &_icon {
     position: relative;
-    width: 3.75em;
-    height: 3.75em;
-    margin-right: 1.5rem;
+    width: 60px;
+    height: 60px;
+    margin-right: 24px;
     border-radius: 6px;
   }
 
@@ -40,9 +40,9 @@
 
   &_title {
     color: #282d30;
-    font-size: 1.25em;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 1.5em;
+    line-height: 24px;
   }
 
   &_subtitle {
@@ -66,5 +66,12 @@
   }
   &_icon.lipid {
     background: rgba(253, 81, 129, 0.1);
+  }
+}
+
+@include breakpoints(1200) {
+  .card {
+    width: 130px;
+    margin-bottom: 0;
   }
 }
