@@ -1,11 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
+// Services
 import { API } from '../../services'
 const { getUserActivity } = API
+
+// Components
 import CustomToolTip from './CustomToolTip'
+
+// Type TS
 import { TypeActivity } from '../../Types'
 
+// Librairies
 import {
   Bar,
   BarChart,
@@ -17,6 +23,7 @@ import {
   YAxis,
 } from 'recharts'
 
+// The Activity Component is a bar chart that displays user activity. This component uses the URL parameter id (of type Number) to fetch the user data.
 const Activity: React.FC = () => {
   const [state, setState] = useState<TypeActivity>([])
   const { id } = useParams<string>()

@@ -1,3 +1,4 @@
+// Type TS
 import { TypeTooltip } from '../../Types'
 
 const CustomToolTip: React.FC<TypeTooltip> = ({ active, payload }) => {
