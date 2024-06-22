@@ -30,11 +30,24 @@ const Profil: React.FC = () => {
         <UserInfos firstName={user?.firstName} />
         <div className="dashboard">
           <div className="dashboard_left">
-            <Activity />
+            <div className="activity">
+              <h2 className="activity_title">Activité quotidienne</h2>
+              <Activity />
+            </div>
             <div className="dashboard_bottom">
-              <Session />
-              <UserPerf />
-              <Score />
+              <div className="session">
+                <h3 className="session_title">
+                  Durée moyenne des <br /> sessions
+                </h3>
+                <Session />
+              </div>
+              <div className="performance">
+                <UserPerf />
+              </div>
+              <div className="score">
+                <h3 className="score_title">Score</h3>
+                <Score />
+              </div>
             </div>
           </div>
           <div className="dashboard_aside">
