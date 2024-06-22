@@ -1,20 +1,15 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+
 //Services
 import { API } from '../../services'
 const { getUserPerformance } = API
+
 //Type TS
 import { TypePerformance } from '../../Types'
 
-// Librairie Rechart
-import {
-  PolarAngleAxis,
-  PolarGrid,
-  PolarRadiusAxis,
-  Radar,
-  RadarChart,
-  ResponsiveContainer,
-} from 'recharts'
+// Component
+import RadarChartPerf from './RadarChartPerf'
 
 // The Performance Component is a radar chart that displays user performance.
 const UserPerf: React.FC = () => {
@@ -30,23 +25,9 @@ const UserPerf: React.FC = () => {
   }, [id])
 
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <RadarChart outerRadius={90} data={perf!.reverse()}>
-        <PolarGrid radialLines={false} />
-        <PolarAngleAxis
-          dataKey="category"
-          tick={{ fill: 'white', fontSize: 12, fontWeight: '500' }}
-          offset={100}
-        />
-        <PolarRadiusAxis tickCount={6} tick={false} axisLine={false} />
-        <Radar
-          dataKey="value"
-          stroke="#FF0101"
-          fill="#FF0101"
-          fillOpacity={0.7}
-        />
-      </RadarChart>
-    </ResponsiveContainer>
+    <>
+      <RadarChartPerf data={perf} />
+    </>
   )
 }
 
