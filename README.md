@@ -7,7 +7,7 @@
 > ## **Front-end**
 
 1. `npm install ou pnpm install`
-2. `Modifier .env,
+2. `Modifier le .env,
 VITE_URL_API=http://localhost:3000, L'url de votre API
 VITE_MOCK=true, true pour utiliser le mock ou false pour utiliser l'api`
 4. `Lance le Font-end -> npm run dev ou pnpm run dev`
