@@ -2,6 +2,7 @@ import { formatActivity, formatPerformance, formatSession } from './formatData'
 
 const env = import.meta.env
 
+// fetch data of the user (name, lastname, etc...)
 export const getUser = async (id?: string) => {
   try {
     const res = await fetch(`${env.VITE_URL_API}/user/${id}`, {
@@ -17,6 +18,7 @@ export const getUser = async (id?: string) => {
   }
 }
 
+// fetch data of the user (kilogram, calories, etc...)
 export const getUserActivity = async (id?: string) => {
   try {
     const res = await fetch(`${env.VITE_URL_API}/user/${id}/activity`, {
@@ -32,6 +34,7 @@ export const getUserActivity = async (id?: string) => {
   }
 }
 
+// fetch data for the average sessions chart
 export const getUserSession = async (id?: string) => {
   try {
     const res = await fetch(`${env.VITE_URL_API}/user/${id}/average-sessions`, {
@@ -47,6 +50,7 @@ export const getUserSession = async (id?: string) => {
   }
 }
 
+// fetch data for the performance chart
 export const getUserPerformance = async (id?: string) => {
   try {
     const res = await fetch(`${env.VITE_URL_API}/user/${id}/performance`, {
@@ -62,6 +66,7 @@ export const getUserPerformance = async (id?: string) => {
   }
 }
 
+//fetch data for the score chart
 export const getScore = async (id?: string) => {
   try {
     const res = await fetch(`${env.VITE_URL_API}/user/${id}`, {
@@ -76,7 +81,7 @@ export const getScore = async (id?: string) => {
     console.log(JSON.stringify(err))
   }
 }
-
+// fetch data for the card Keydata
 export const getKeyData = async (id?: string) => {
   try {
     const res = await fetch(`${env.VITE_URL_API}/user/${id}`, {

@@ -1,15 +1,20 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+
+// Serviced
 import { API } from '../../services'
+const { getKeyData } = API
+//Components
 import Card from './Card'
+//SVG
 import calories from '../../assets/images/energy.svg'
 import proteins from '../../assets/images/chicken.svg'
 import carbs from '../../assets/images/apple.svg'
 import fat from '../../assets/images/cheeseburger.svg'
+// Type TS
 import { TypeCard } from '../../Types'
 
-const { getKeyData } = API
-
+// The KeyData component reuses the Card component multiple times.
 const KeyData: React.FC = () => {
   const [keyState, setKeyState] = useState<TypeCard>()
   const { id } = useParams<string>()

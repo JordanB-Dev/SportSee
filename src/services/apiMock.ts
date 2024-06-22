@@ -1,5 +1,6 @@
 import { formatActivity, formatPerformance, formatSession } from './formatData'
 
+// fetch data of the user (name, lastname, etc...)
 export const getUser = async (id?: string) => {
   try {
     const res = await fetch('../../mocks/main_data.json', {
@@ -15,6 +16,7 @@ export const getUser = async (id?: string) => {
   }
 }
 
+// fetch data of the user (kilogram, calories, etc...)
 export const getUserActivity = async (id?: string) => {
   try {
     const res = await fetch('../../mocks/activity.json', {
@@ -32,6 +34,7 @@ export const getUserActivity = async (id?: string) => {
   }
 }
 
+// fetch data for the average sessions chart
 export const getUserSession = async (id?: string) => {
   try {
     const res = await fetch('../../mocks/average_sessions.json', {
@@ -49,6 +52,7 @@ export const getUserSession = async (id?: string) => {
   }
 }
 
+// fetch data for the performance chart
 export const getUserPerformance = async (id?: string) => {
   try {
     const res = await fetch('../../mocks/performance.json', {
@@ -67,6 +71,7 @@ export const getUserPerformance = async (id?: string) => {
   }
 }
 
+//fetch data for the score chart
 export const getScore = async (id?: string) => {
   try {
     const res = await fetch('../../mocks/main_data.json', {
@@ -84,7 +89,7 @@ export const getScore = async (id?: string) => {
     console.log(JSON.stringify(err))
   }
 }
-
+// fetch data for the card Keydata
 export const getKeyData = async (id?: string) => {
   try {
     const res = await fetch('../../mocks/main_data.json', {

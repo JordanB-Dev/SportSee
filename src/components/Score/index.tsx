@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+// Service
 import { API } from '../../services'
-import { RadialBar, RadialBarChart } from 'recharts'
 const { getScore } = API
+// Librairie Rechart
+import { RadialBar, RadialBarChart } from 'recharts'
 
+// The Score Component is a radial bar chart that displays user score.
 const Score: React.FC = () => {
   const [score, setScore] = useState<number | undefined>(1)
   const { id } = useParams<string>()

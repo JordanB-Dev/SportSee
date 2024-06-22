@@ -1,5 +1,7 @@
+// Type TS
 import { TypeTooltip } from '../../Types'
 
+// Component ToolTip Session
 const CustomToolTip: React.FC<TypeTooltip> = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (

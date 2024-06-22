@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
+//Services
 import { API } from '../../services'
+const { getUserPerformance } = API
+//Type TS
 import { TypePerformance } from '../../Types'
+
+// Librairie Rechart
 import {
   PolarAngleAxis,
   PolarGrid,
@@ -12,8 +16,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 
-const { getUserPerformance } = API
-
+// The Performance Component is a radar chart that displays user performance.
 const UserPerf: React.FC = () => {
   const [perf, setPerf] = useState<TypePerformance>([])
   const { id } = useParams<string>()

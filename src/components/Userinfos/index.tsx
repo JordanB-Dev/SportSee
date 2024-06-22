@@ -1,3 +1,4 @@
+//Type TS
 import { TypeUser } from '../../Types'
 
 const UserInfos: React.FC<TypeUser> = ({ firstName }) => {

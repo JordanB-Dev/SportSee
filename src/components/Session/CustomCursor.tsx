@@ -1,6 +1,9 @@
+// Librairie Rechart
 import { Rectangle } from 'recharts'
+// Type TS
 import { TypeCursor } from '../../Types'
 
+// Component Cursor Session
 const CustomCursor: React.FC<TypeCursor> = (props) => {
   const { points, width, height } = props
   const { x, y } = points[0]

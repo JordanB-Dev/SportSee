@@ -1,5 +1,7 @@
+// Type TS
 import { TypeCard } from '../../Types'
 
+// Components Card
 const Card: React.FC<TypeCard> = ({
   userKeyData,
   unit,

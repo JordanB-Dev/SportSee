@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
+//Services
 import { API } from '../../services'
+const { getUserSession } = API
 import { TypeSession } from '../../Types'
+// Librairie Rechart
 import {
   CartesianGrid,
   Line,
@@ -12,11 +15,11 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
+// Component
 import CustomToolTip from './CustomToolTip'
 import CustomCursor from './CustomCursor'
 
-const { getUserSession } = API
-
+// The Session Component is a line chart that displays user session.
 const Session: React.FC = () => {
   const [state, setState] = useState<TypeSession>([])
   const { id } = useParams<string>()

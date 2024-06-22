@@ -11,7 +11,7 @@ import CustomToolTip from './CustomToolTip'
 // Type TS
 import { TypeActivity } from '../../Types'
 
-// Librairies
+// Librairie Rechart
 import {
   Bar,
   BarChart,
